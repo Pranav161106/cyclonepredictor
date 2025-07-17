@@ -19,143 +19,129 @@
       <a href="login.html">User</a>
     </nav>
   </header>
-
-
-  <style>
-
-    
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(#0d0d2b, #000);
-  color: #ffffff;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
   
+  <style>
+  
+	body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: #f5f7fa;
+  color: #111;
 }
 
-/* Stars Background */
-.stars::before,
-.stars::after {
-  content: '';
-  position: absolute;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
   top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: transparent;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-  background-size: 3px 3px;
-  animation: moveStars 60s linear infinite;
-  opacity: 0.2;
+  z-index: 10;
 }
 
-.stars::after {
-  animation-duration: 120s;
-  opacity: 0.1;
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
 }
 
-@keyframes moveStars {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* Login Box */
-.login-container {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 40px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-  text-align: center;
-  width: 300px;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-}
-
-.login-container h2 {
-  margin-bottom: 20px;
-  color: #00f0ff;
-}
-
-/* Form Elements */
-form input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1rem;
-}
-
-form input::placeholder {
-  color: #aaa;
-}
-
-form button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #00f0ff;
-  color: #000;
-  border-radius: 8px;
+.project-name {
+  font-size: 1.5em;
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+  color: #007BFF;
 }
 
-form button:hover {
-  background-color: #00c4cc;
-}
-
-/* Register Link */
-.register-link {
-  margin-top: 15px;
-  font-size: 0.85rem;
-  color: #ccc;
-}
-
-.register-link a {
-  color: #00f0ff;
+.nav-links a {
+  margin-left: 20px;
   text-decoration: none;
-  font-weight: bold;
+  color: #333;
+  font-weight: 500;
 }
 
-.register-link a:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  color: #007BFF;
 }
 
-    
-    </style>
+.login-btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.carousel h1 {
+  font-size: 2em;
+  color: #007BFF;
+}
+
+.carousel p {
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.carousel .button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.carousel-controls {
+  margin-top: 20px;
+}
+
+.carousel-controls .prev,
+.carousel-controls .next {
+  cursor: pointer;
+  font-size: 30px;
+  padding: 10px;
+  color: #007BFF;
+}
+
+  
+  </style>
 
   <main>
     <h1>Welcome to the Space Project</h1>
     <p>Explore the universe of data.</p>
 
-    <!-- 🌠 Drag & Drop File Upload Box -->
+    <!-- ðŸŒ  Drag & Drop File Upload Box -->
     <div id="drop-area">
-      <p>🚀 Drag & drop your space files here<br>or click to upload</p>
+      <p>ðŸš€ Drag & drop your space files here<br>or click to upload</p>
       <input type="file" id="fileElem" multiple />
       <label for="fileElem">Browse Files</label>
       <div id="file-list"></div>
-      <br><br>
-      <input type="submit" value="Predict Intensity">
     </div>
   </main>
 
