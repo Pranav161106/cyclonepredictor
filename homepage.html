@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Project</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+
+
+/
+<style>
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0c10;
+  color: #ffffff;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 15, 30, 0.9);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffff;
+}
+
+main {
+  padding: 100px 20px 20px;
+  text-align: center;
+}
+
+
+</style>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logoo.jpeg" alt="Logo" class="logo-img" />
+      <span class="project-name">Space Project</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="dropbox.html">InsightScan</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to the Space Project</h1>
+    <p>Explore the universe of data.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h2>Predicted Cyclone Intensity</h2>
+    <p><strong>Intensity:</strong> {{ intensity }}</p>
+    <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" width="300px">
+    <br><br>
+    <a href="/">Predict Another</a>
+</body>
+</html>

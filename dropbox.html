@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Project</title>
+  <link rel="stylesheet" href="css/dropboxstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Logo" class="logo-img" />
+      <span class="project-name">Space Project</span>
+    </div>
+    <nav class="nav-links">
+      <a href="homepage.html">Home</a>
+      <a href="dropbox.html">InsightScan</a>
+      <a href="login.html">User</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to the Space Project</h1>
+    <p>Explore the universe of data.</p>
+
+    <!-- 🌠 Drag & Drop File Upload Box -->
+    <div id="drop-area">
+      <p>🚀 Drag & drop your space files here<br>or click to upload</p>
+      <input type="file" id="fileElem" multiple />
+      <label for="fileElem">Browse Files</label>
+      <div id="file-list"></div>
+      <br><br>
+      <input type="submit" value="Predict Intensity">
+    </div>
+  </main>
+
+  <script src="files.js"></script>
+</body>
+</html>
