@@ -376,9 +376,65 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
+		
+		
+		.hero-video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video */
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Overlay content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+/* Optional: translucent overlay for text readability */
+.hero-video-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+
+
+
+
     </style>
 </head>
 <body>
+
+
+
+
+
+
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="spinner"></div>
@@ -413,51 +469,27 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="content-section section-home active">
-        <div class="hero-section">
-            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                </div>
-                
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-caption">
-                            <h1 class="text-white">Upload Infrared Images – Predict Cyclone Intensity with AI</h1>
-                            <p class="text-white">Harness deep learning models to detect storms before they strike.</p>
-                            <button class="btn cta-button" onclick="showSection('scan')">Start Scanning</button>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="carousel-caption">
-                            <h1 class="text-white">AI That Understands Storms</h1>
-                            <p class="text-white">Trained on thousands of IR satellite images to give you early warnings.</p>
-                            <button class="btn cta-button" onclick="showSection('scan')">Try Demo</button>
-                        </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="carousel-caption">
-                            <h1 class="text-white">See the Future. Prepare for It.</h1>
-                            <p class="text-white">Our model analyzes storm structure and intensity zones in real time.</p>
-                            <button class="btn cta-button" onclick="showSection('scan')">Upload Now</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
-        </div>
-    </section>
+	
+	
+	
+	<div class="hero-video-container">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://bmcnoldy.earth.miami.edu/tropics/ida21/Ida_29Aug21_g16c2.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-content">
+    <!-- Keep your existing overlay text/buttons here -->
+    <h1>Upload Infrared Images – Predict Cyclone Intensity with AI</h1>
+    <p>Harness deep learning to detect storms before they strike.</p>
+    <button class="btn cta-button" onclick="showSection('scan')">Start Scanning</button>
+  </div>
+</div>
 
+
+
+
+
+    
     <!-- Scan Section -->
     <section id="scan" class="content-section scan-section">
         <div class="container">
